@@ -1,0 +1,431 @@
+
+body{
+  font-family:'Open Sans',sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1dfde;
+  /*#f0f0f0;*/
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.arabnews.com/sites/default/files/styles/n_670_395/public/2021/04/20/2582876-1891485452.png?itok=lgTOaltQ");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+header{
+width: 100%;
+height: 70px;
+display: flex;
+align-items: center;
+justify-content: space-around;
+background: #232323;
+color: #ccc;
+}
+
+.nav {
+display:flex;
+justify-content:space-around;
+width: 80%;
+align-items: center;
+}
+.nav-links {
+list-style: none;
+margin:20px;
+}
+.nav-links a {
+color: #ccc;
+text-decoration: none;
+font-size: 21px;
+}
+li a:hover
+{
+
+border-bottom: 4px solid #ff4d40;
+}
+.logo{
+  font-size: 32px;
+  color: white;
+  letter-spacing:3px;
+}
+
+form.submit {
+  display: flex;
+  justify-content: center;
+  border: none;
+  float: right;
+}
+
+input.submit {
+position:center;
+  width: 300px;
+  height: 37px;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  margin-top: 20px;
+  background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+
+}
+
+.hero-text{
+  font-size: 32px;
+  color: white;
+  letter-spacing:3px;
+  text-align:center;
+  padding-top: 100px;
+}
+.btn1{
+  position: relative;
+  background-color:#ff4d40;
+  border: none;
+  border-radius: 25px;
+  font-size: 28px;
+  color: white;
+  padding: 16px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+//photo gallery = about
+
+.container-all{
+  width: fit-content;
+  margin: 20px auto;
+  height: auto;
+}
+.container{
+  width: calc(33% - 6px);
+  overflow:hidden;
+  height: fit-content;
+  margin:4px;
+  padding:0px;
+  display:block;
+  position:relative;
+  float:left;
+}
+img{
+  width: 100%;
+  transition-duration: .3s;
+  max-width: 100%;
+  display:block;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.title{
+  position:absolute;
+  display:block;
+  cursor:pointer;
+  top: 35%;
+  display: none;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 1.6em;
+  text-shadow: 1px 5px 10px black;
+  transition-duration: .3s;
+}
+.text{
+  position:absolute;
+  top: 70%;
+  cursor:pointer;
+  max-width: 80%;
+  text-align:center;
+  left: 50%;
+  text-shadow: 1px 5px 10px black;
+  font-size: 1em;
+  display:none;
+  margin-right: -50%;
+  transition-duration: .3s;
+  transform: translate(-50%, -50%)
+}
+.container:hover img{
+  transform: scale(1.2);
+  transition-duration: .3s;
+  filter: grayscale(50%);
+  opacity: .7;
+}
+.container:hover span{
+  color:white;
+  display: block;
+  transition-duration: .3s;
+}
+@media only screen and (max-width: 900px) {
+    .container {
+        width: calc(50% - 6px);
+    }
+}
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 100%;
+    }
+}
+
+//open times
+#time
+{
+position:absolute;
+top:40%;
+left:10%;
+-webkit-transform:translate(-20%,-30%);
+transform:translate(-20%,-50%);
+}
+
+table
+{
+width:1000px;
+border-collapse:collapse;
+overflow:hidden;
+box-shadow: 0 0 20px rgba(0,0,0,0.5);
+justify-content: center;
+margin-left: 110px;
+}
+th,td{
+padding:15px;
+background-color:rgba(255,255,255,0.5);
+color:#66666;
+}
+
+th
+{
+text-align:left;
+background-color:#ff4d40;
+font-size:20px;
+font-family:"Dubai";
+color: white;
+}
+tbody td
+{
+position:relative;
+font-size:13px;
+font-family:Castellar;
+}
+
+tbody tr:hover
+
+{
+background-color:rgba(255, 77, 64,0.2)
+}
+
+tbody td:hover:before
+{
+content:"";
+position:absolute;
+left:0;
+right:0;
+top:-9999px;
+bottom:-9999px;
+background-color:rgba(255, 77, 64,0.2);
+z-index:-1;
+
+}
+
+/*GYMs*/
+.Location img{
+  float: left;
+  width: 30px;
+  height: 70px;
+  background:#f0f0f0;
+
+}
+
+
+.Location h1{
+  position: relative;
+  top: 18px;
+  left: -90px;
+}
+/*footer*/
+
+footer{
+
+  width: 100%;
+  height: 60%;
+  display: inline-block;
+  background:#232323;
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+  background: #232323;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  height: 47%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  #ff4d40;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center h4{
+color:#ffffff;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  #ff4d40;
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons img{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  white;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+}
